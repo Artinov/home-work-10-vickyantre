@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./to_do.css">
+</head>
+<body>
+    
+        <div class="vi">
+            <input type="text" id="listName" class="list-name col-md-12 form-control" placeholder="Name of the List">
+        </div>
+
+        <div class="row vi">
+            <div class="col-md-1 vi">
+                <button id="markAllCompleted" class="btn btn-default">✔</button>
+            </div>
+            <div class="col-md-11 vi">
+               <input type="text" id="todoText" placeholder="New task" class="form-control"/> 
+            </div>
+        </div>
+
+        <div class="row vi">
+            <div class="col-md-12">
+                <ul id="todoList" class="list-group"></ul>
+            </div>
+        </div>
+
+        <div class="row vi">
+            <div class="col-md-4">
+                <span>Todos left: <span id="todosLeft"></span></span>
+            </div>
+            <div class="btn-group col-md-4 text-center" role="group">
+                <button type="button" class="btn btn-default" id="showAll">All</button>
+                <button type="button" class="btn btn-default" id="showActive">Active</button>
+                <button type="button" class="btn btn-default" id="showCompleted">Completed</button>
+            </div>
+            <div class="col-md-4 text-right">
+                <button type="button" class="btn btn-default" id="clearCompleted">Clear completed</button>  
+            </div>
+        </div>
+
+        <div id="hollow"  style="display: none;">
+        	 <li class="list-group-item"><input type="checkbox"> <span>Todo text</span> <button class="btn btn-default btn-xs pull-right">x</button></li>
+        </div>
+ 
+
+
+    <script src="./to_do.js"></script>
+</body>
+</html>
