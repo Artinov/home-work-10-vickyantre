@@ -9,27 +9,27 @@
     <link rel="stylesheet" type="text/css" href="./to_do.css">
 </head>
 <body>
-    
-        <div class="vi">
-            <input type="text" id="listName" class="list-name col-md-12 form-control" placeholder="Name of the List">
+    <div class="paper">
+        <div class="down-line">
+            <input type="text" id="listName" class="list-name form-control" placeholder="Name of the List">
         </div>
 
-        <div class="row vi">
-            <div class="col-md-1 vi">
-                <button id="markAllCompleted" class="btn btn-default">✔</button>
+        <div class="row2 down-line">
+            <div>
+                <button id="markAllCompleted" class="mark-all btn btn-default">✔</button>
             </div>
-            <div class="col-md-11 vi">
-               <input type="text" id="todoText" placeholder="New task" class="form-control"/> 
+            <div>
+               <input type="text" id="todoText" placeholder="What needs to be done?"/> 
             </div>
         </div>
 
-        <div class="row vi">
+        <div class="row">
             <div class="col-md-12">
                 <ul id="todoList" class="list-group"></ul>
             </div>
         </div>
 
-        <div class="row vi">
+        <div class="row4">
             <div class="col-md-4">
                 <span>Todos left: <span id="todosLeft"></span></span>
             </div>
@@ -41,11 +41,12 @@
             <div class="col-md-4 text-right">
                 <button type="button" class="btn btn-default" id="clearCompleted">Clear completed</button>  
             </div>
-        </div>
-
-        <div id="hollow"  style="display: none;">
-        	 <li class="list-group-item"><input type="checkbox"> <span>Todo text</span> <button class="btn btn-default btn-xs pull-right">x</button></li>
-        </div>
+            
+            <div id="hollow"  style="display: none;">
+            	 <li class="list-group-item"><input class="checkbox-round" type="checkbox"> <span>Todo text</span> <button class="btn btn-default btn-xs pull-right">x</button></li>
+            </div>
+    </div>
+    </div>
  
 
 

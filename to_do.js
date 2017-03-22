@@ -50,13 +50,11 @@ markAllCompleted.onclick = function() {
 
     if(activeTodos == 0) {
         todos.forEach(function(todo) {
-            
             changeTodoStatus(todo,"", false)
         });
     
     } else {
         todos.forEach(function(todo) {
-            
             changeTodoStatus(todo, "todo-done", true)
         });
     }
@@ -153,6 +151,7 @@ function highlightButton (todoFilter){
     document.querySelectorAll(".btn-group .btn").forEach(function(button){
         button.setAttribute("class", "btn btn-default")
     })
+
     switch(todoFilter){
         case true: 
             showCompleted.setAttribute("class", "btn btn-primary");

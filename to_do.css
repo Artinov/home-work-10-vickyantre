@@ -16,9 +16,76 @@ li:hover button{
 }
 
 body{
+	font-size: 15px;
 	width: 70%;
 	margin: 0 auto;
 }
-.vi{
-	margin-top: 20px;
+.paper {
+  background: #fff;
+  box-shadow:
+    /* The top layer shadow */
+    0 1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 10px 1px -4px rgba(0,0,0,0.15),
+     /* The third layer */
+    0 20px 0 -10px #eee,
+    /* The third layer shadow */
+    0 20px 1px -9px rgba(0,0,0,0.15);
+    border: 1px solid lightgrey;
+}
+
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background: grey;
+}
+
+.list-name{
+	padding: 20px;
+	font-size: 15px;
+	border: none;
+	border-radius: 0;
+}
+.mark-all{
+	border: none;
+	border-radius: 0;
+}
+.row2{ 
+	padding: 10px 0 10px 0px; 
+	border: none;
+}
+.row2 div{
+	display: inline-block;
+}
+.row2 div input{
+	width: 90%;
+	font-size: 15px;
+	border: none;
+}
+.list-group{
+	border-radius: 0;
+}
+.down-line{
+	border-bottom: 1px solid lightgrey;
+}
+.list-group{
+	border-radius: none;
+	border: none;
+}
+.row4{
+	padding-top: -5px;
+	padding-bottom: 50px;
+	margin: 0;
 }
