@@ -69,7 +69,7 @@ function changeTodoStatus(todo,liClass, todoState){
 
             todo.isDone = todoState;
             checkbox.checked = todoState;
-            li.setAttribute("class", "list-group-item" + liClass)
+            li.setAttribute("class", "list-group-item " + liClass)
 }
 
 
