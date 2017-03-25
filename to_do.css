@@ -108,3 +108,11 @@ div span{
 	color: #c25353;
 }
 
+.list-group {
+	border: none;
+}
+.mark-all-selected{
+	color: lightgrey;
+}
+
+

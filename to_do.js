@@ -25,6 +25,8 @@ inputText.onkeypress = function(e) {
         inputText.value = "";
         renderTodos();
         countActiveTodos();
+        showClearCompleted();
+        showMarkAllButton()
     }
 }
 
@@ -40,6 +42,28 @@ clearCompleted.onclick = function() {
         return todo.isDone == false;
     });
         updateLocalStorage();
+}
+
+function showClearCompleted(){
+    var completedTodos = todos.filter(function(todo) {
+        return todo.isDone == true;
+    });
+    if (completedTodos.length == 0){
+            clearCompleted.style.display="none";
+        } else {
+            clearCompleted.style.display="inline-block";
+        }
+}
+
+function showMarkAllButton(){
+    var completedTodos = todos.filter(function(todo){
+        return todo.isDone == false;
+    });
+    if (completedTodos.length == 0){
+        markAllCompleted.classList.remove("mark-all-selected")
+    } else {
+        markAllCompleted.classList.add("mark-all-selected")
+    }
 }
 
 
@@ -60,6 +84,8 @@ markAllCompleted.onclick = function() {
     }
 
     countActiveTodos();
+    showClearCompleted();
+    showMarkAllButton();
     updateLocalStorage();
 }
 
@@ -131,6 +157,8 @@ function renderTodos(todoFilter) {
                 todo.isDone = false;
             }
             countActiveTodos();
+            showClearCompleted();
+            showMarkAllButton();
             updateLocalStorage();
         }
         todoElementTemplate.querySelector("button").onclick = function(e) {
@@ -141,7 +169,9 @@ function renderTodos(todoFilter) {
             todosList.removeChild(li);
             // renderTodos();
             countActiveTodos();
-            updateLocalStorage()
+            showClearCompleted();
+            showMarkAllButton()
+            updateLocalStorage();
         }
         todosList.appendChild(todoElementTemplate);
     });
@@ -189,7 +219,8 @@ function init(){
       todos = JSON.parse(localStorageTodos);  
     }
     
-    
+    showClearCompleted()
+    showMarkAllButton();
     renderTodos(null);
     countActiveTodos(); 
 }
