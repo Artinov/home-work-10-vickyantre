@@ -13,7 +13,8 @@ var globalTodoFilter = null;
 
 var todos = [];
 
-inputText.onkeypress = function(e) {
+// inputText.onkeypress = function(e) {
+$("#todoText").keypress(function(e){
     if (e.keyCode == 13) {
         todoIndexValue++;
         todos.push({
@@ -28,9 +29,10 @@ inputText.onkeypress = function(e) {
         showClearCompleted();
         showMarkAllButton()
     }
-}
+})
 
-clearCompleted.onclick = function() {
+// clearCompleted.onclick =function() {
+$("#clearCompleted").click(function(){
     todos.forEach(function(todo, i) {
         if (todo.isDone == true) {
             var li = document.querySelector("li[todo-index='" + todo.index + "']");
@@ -42,7 +44,7 @@ clearCompleted.onclick = function() {
         return todo.isDone == false;
     });
         updateLocalStorage();
-}
+})
 
 function showClearCompleted(){
     var completedTodos = todos.filter(function(todo) {
